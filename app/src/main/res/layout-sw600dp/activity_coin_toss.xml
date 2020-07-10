@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".coinTossActivity"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:id="@+id/userResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Score: 0"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="120sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/question"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31" />
+
+    <Button
+        android:onClick="flipcoinheads"
+        android:id="@+id/heads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Heads"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tails"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:onClick="flipcointails"
+        android:id="@+id/tails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tails"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.767"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.501" />
+
+    <TextView
+        android:id="@+id/cointossresult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ready?"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="120dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:layout_editor_absoluteX="0dp" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:background="@color/colorPrimaryLight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_bottom_navigation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    tools:context=".rpsLogic">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6px"
+            android:background="@color/colorAccentLight"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="41dp"
+                android:textColor="@color/colorAccent"
+                android:text="Player: 0 - 0: CPU"
+                android:textAlignment="center"
+                android:textSize="30dp" />
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6px"
+            android:background="#FFF" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.26999998">
+
+        <ImageView
+            android:id="@+id/yourImage"
+            android:layout_width="0px"
+            android:layout_height="275dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:src="@drawable/question" />
+
+        <ImageView
+            android:id="@+id/cpuImage"
+            android:layout_width="0px"
+            android:layout_height="275dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:src="@drawable/question" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle"
+            android:paddingRight="10px"
+            android:text="YOU"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle"
+            android:paddingLeft="10px"
+            android:text="CPU"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ready?"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:textSize="50dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.42000002">
+
+        <Button
+            android:id="@+id/rock_btn"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="rockUserChoice"
+            android:text="Rock" />
+
+        <Button
+            android:id="@+id/paper_btn"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="paperUserChoice"
+            android:text="Paper" />
+
+        <Button
+            android:id="@+id/scissors_btn"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="scissorsUserChoice"
+            android:text="Scissors" />
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/bottom_navigation"
+        app:menu="@menu/menu_bottom_navigation" />
+
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/adsplay"
+        android:onClick="playAds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watch ad for 3 more lives"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

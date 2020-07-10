@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dreamtime.dreamtimearcade">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+
+    <supports-screens
+        android:normalScreens="true"
+        android:xlargeScreens="true"
+        />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="DreamTime"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2887669441005455~5802619071" />
+
+        <activity android:name="com.dreamtime.dreamtimearcade.LeaderboardActivity"/>
+        <activity android:name="com.dreamtime.dreamtimearcade.journalActivity" />
+        <activity android:name="com.dreamtime.dreamtimearcade.NoteEditorActivity" />
+        <activity android:name="com.dreamtime.dreamtimearcade.SleepScheduleActivity" />
+        <activity android:name="com.dreamtime.dreamtimearcade.MusicActivity" />
+        <activity
+            android:name="com.dreamtime.dreamtimearcade.ResetPasswordActivity"
+            android:theme="@style/Apptheme.NoActionBar" />
+        <activity android:name="com.dreamtime.dreamtimearcade.coinTossActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.dreamtime.dreamtimearcade.Menu2"
+            android:theme="@style/Apptheme.NoActionBar" />
+        <activity
+            android:name="com.dreamtime.dreamtimearcade.AccountActivity"
+            android:theme="@style/Apptheme.NoActionBar" />
+        <activity android:name="com.dreamtime.dreamtimearcade.MainActivity" />
+        <activity android:name="com.dreamtime.dreamtimearcade.rpsLogic" />
+        <activity
+            android:name="com.dreamtime.dreamtimearcade.register"
+            android:theme="@style/Apptheme.NoActionBar" />
+        <activity
+            android:name="com.dreamtime.dreamtimearcade.login"
+            android:theme="@style/Apptheme.NoActionBar" />
+        <activity
+            android:name="com.dreamtime.dreamtimearcade.MenuActivity"
+            android:theme="@style/Apptheme.NoActionBar" />
+        <activity
+            android:name="com.dreamtime.dreamtimearcade.SplashScreenActivity"
+            android:theme="@style/SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.dreamtime.dreamtimearcade.StartActivity"
+            android:theme="@style/Apptheme.NoActionBar" />
+    </application>
+
+</manifest>

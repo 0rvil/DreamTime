@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountActivity"
+    android:background="@drawable/gradient_background">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/email"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/rpsHighScore"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/rpsHighScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rock paper Scissors High Score"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <TextView
+        android:id="@+id/ctHighScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Coin Toss High  Score"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/emailIntent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rpsHighScore"
+        app:layout_constraintVertical_bias="0.22000003" />
+
+    <TextView
+        android:id="@+id/tttHighScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tic Tac Toe High Score"
+        android:textColor="@color/colorAccent"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/emailIntent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ctHighScore" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/bottom_navigation"
+        app:menu="@menu/menu_bottom_navigation" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Some icons made by icons8.com"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.68" />
+
+    <Button
+        android:id="@+id/emailIntent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="emailUs"
+        android:text="Email Us"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintVertical_bias="0.59000003" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="followUs"
+        android:text="Follow us on Instagram"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailIntent"
+        app:layout_constraintVertical_bias="0.6" />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="privacy"
+        android:text="Privacy Policy"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailIntent"
+        app:layout_constraintVertical_bias="0.6" />
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="terms"
+        android:text="Terms and conditions"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailIntent"
+        app:layout_constraintVertical_bias="0.6"
+        />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="adsPlay"
+        android:text="Watch an ad to increase score by 3 points"
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailIntent"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:background="@drawable/round_button_dark"
+        android:onClick="logout"
+        android:text="Logout of Account"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84000003" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
